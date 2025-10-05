@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STABLE QUIZ CHALLENGE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Landing Screen -->
+        <div id="landingScreen" class="screen active">
+            <div class="logo">
+                <div class="logo-circle">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="45" fill="#667eea"/>
+                        <text x="50" y="60" text-anchor="middle" fill="white" font-size="40" font-weight="bold">S</text>
+                    </svg>
+                </div>
+            </div>
+            <h1>STABLE QUIZ CHALLENGE</h1>
+            <button id="enterBtn" class="btn-primary">Enter</button>
+        </div>
+
+        <!-- Warning Screen -->
+        <div id="warningScreen" class="screen">
+            <div class="warning-content">
+                <h2>CAUTION!</h2>
+                <p>DON'T ENTER IF YOU DON'T HAVE MUCH KNOWLEDGE ABOUT STABLE</p>
+                <button id="startBtn" class="btn-primary">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-header">
+                <div class="progress">Question <span id="currentQuestion">1</span>/20</div>
+                <div class="score">Score: <span id="currentScore">0</span>/20</div>
+                <div class="timer">
+                    <div class="timer-bar">
+                        <div class="timer-progress" id="timerProgress"></div>
+                    </div>
+                    <span id="timeLeft">5s</span>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="questionText"></h2>
+                <div id="optionsContainer" class="options-container">
+                    <!-- Options will be generated here -->
+                </div>
+            </div>
+
+            <div class="feedback" id="feedback">
+                <!-- Feedback messages will appear here -->
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="endScreen" class="screen">
+            <div class="end-content">
+                <h2 id="endTitle"></h2>
+                <p id="endMessage"></p>
+                <div id="confetti"></div>
+                <button id="restartBtn" class="btn-primary">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
